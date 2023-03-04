@@ -1,0 +1,167 @@
+/*reset defult margins and change background color*/
+html, body {
+  margin: 0px;
+  background-color: #9BBC47;
+}
+
+/*Quiz page image size*/
+#quizwallpaper{
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+/* Quiz page's text, color and margins */
+h1, h2, p, form{
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  text-align: center; /*centering the title*/
+  }
+
+h1{
+  font-size: 100px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+p{
+  font-size: 25px;
+}
+
+form{
+font-size: 20px;
+}
+
+/*Quiz page's colored div backgrounds*/
+.back1quiz{
+  background-color:#9BBC47 ;
+  padding-top: 50px; 
+  padding-bottom: 70px;
+  width: 100%;
+}
+
+.back2quiz{
+  background-color:#D3DA32 ;
+  padding-top: 100px; 
+  padding-bottom: 100px;
+  width: 100%;
+  }
+ 
+
+.imgcontainer{
+  display: flex;
+  justify-content: center;
+}
+
+/*Quiz pictures*/
+
+.quiz{
+  width: 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*Make quiz pictures transition when thier corresponding radio button is selected*/
+
+input[type="radio"]:checked + label > img {
+  border: 1px solid white;
+  box-shadow: 0 0 6px 6px #9BBC47;
+}
+
+input[type="radio"] + label > img {
+  border: 1px rgb(0, 0, 0);
+  padding: 10px;
+
+  transition: 500ms all;
+}
+
+input[type="radio"]:checked + label > img {
+  transform: rotateZ(-10deg) rotateX(10deg);
+}
+
+/*Submit and reset button*/
+.button {
+  background-color: #9BBC47;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+}
+
+
+/*------------------------------------------------------------------*/
+/*Sidebar*/
+
+
+
+/*The sidebar menu */
+.sidebar {
+    height: 100%; /* Full-height when opened */
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightblue; 
+    overflow-x: hidden; /*Disable horizontal scroll*/
+    padding-top: 60px;
+    transition: 0.5s; /*Transition effect to slide in the sidebar*/
+    opacity: 1;
+    font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  }
+  
+  /*Sidebar hyperlinks to other pages */
+  .sidebar a {
+    padding: 8px 8px 8px 45px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /*The X button (top right when sidebar is open) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Sidebar opening hamburger button */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lightblue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.6;
+  }
+  .openbtn:hover {
+    background-color: #9BBC47;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

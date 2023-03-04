@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="quiz.css">
+<link rel="icon" type="image/x-icon" href="../Extra/favicon.ico">       
+<title>Studio Ghibli</title>
+</head>
+
+<body>
+<img src="quizwallpaper.jpeg" alt="wallpaper" id="quizwallpaper">
+
+<div class="back1quiz">
+<h1>Studio Ghibili Quiz</h1>
+
+<h2>Not sure what to watch? <br> Take the quiz to find out which movie is your match!</h2>
+</div>
+
+
+
+<!--Sidebar-->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../HomePage/index.html">Home</a>
+  <a href="../MusicPage/music.html">Music</a>  
+  <a href="../GalleryPage/gallery.html">Gallery</a>
+  <a href="../QuizPage/quiz.html">Quiz</a>
+</div>
+        
+<div id="main">
+
+<!--&#9776 is the hamburger sidebar-->
+  <button class="openbtn" onclick="openNav()">&#9776; </button>
+</div>
+
+
+
+<!--Quiz-->
+<div class="back2quiz">
+
+
+  <form>
+    <label>Which is your favourite hobby? </label><br>
+  <div class="imgcontainer">
+    <input id= "1p1" type="radio" value="a" name="group1">
+    <label><img src="quizbooks.jpeg" alt="reading" class="quiz"></label><br>
+
+    <input id="1p2" type="radio" value="b" name="group1">
+    <label><img src="quizremote.jpeg" alt="gaming" class="quiz"></label><br>
+
+    <input id="1p3" type="radio" value="c" name="group1">
+    <label><img src="quizmakeart.jpeg" alt="painting" class="quiz"></label><br>
+
+    <input id="1p4" type="radio" value="d" name="group1">
+    <label><img src="quizwalk.jpeg" alt="hiking" class="quiz"></label><br>
+ </div>
+   
+ 
+  <br><br>
+
+    <label>Which fruit picture looks the best to you? </label><br>
+    <div class="imgcontainer">
+    <input id="2p1" type="radio" value="a" name="group2">
+    <label><img src="quizpeaches.jpeg" alt="peaches" class="quiz"></label><br>
+
+    <input id="2p2" type="radio" value="b" name="group2">
+    <label><img src="quizrasberries.jpeg" alt="rasberries" class="quiz"></label><br>
+
+    <input id="2p3" type="radio" value="c" name="group2">
+    <label><img src="quizcitrus.jpeg" alt="citrus" class="quiz"></label><br>
+
+    <input id="2p4" type="radio" value="d" name="group2">
+    <label><img src="quizapples.jpeg" alt="apples" class="quiz"></label><br>
+  </div>
+    
+  
+ 
+  <br><br>
+
+    <label>Which mug would you be most likely to drink out of? </label><br>
+    <div class="imgcontainer">
+    <input id="3p1" type="radio" value="a" name="group3">
+    <label><img src="quizredmug.jpeg" alt="red mug" class="quiz"></label><br>
+
+    <input id="3p2" type="radio" value="b" name="group3">
+    <label><img src="quizpinkmug.jpeg" alt="pink mug" class="quiz" ></label><br>
+
+    <input id="3p3" type="radio" value="c" name="group3">
+    <label><img src="quizbasicmug.jpeg" alt="basic white mug" class="quiz"></label><br>
+
+    <input id="3p4" type="radio" value="d" name="group3">
+    <label><img src="quizflowermug.jpeg" alt="flower mug" class="quiz"></label><br>
+  </div>
+  
+ 
+  <br><br>
+
+ 
+    <label>Which painting calls to you? </label><br>
+    <div class="imgcontainer">
+    <input id="4p1" type="radio" value="a" name="group4">
+    <label><img src="quizdeerart.jpeg" alt="deer art" class="quiz"></label><br>
+
+    <input id="4p2" type="radio" value="b" name="group4">
+    <label><img src="quizbeachart.jpeg" alt="beach art" class="quiz"></label><br>
+
+    <input id="4p3" type="radio" value="c" name="group4">
+    <label><img src="quizpeopleart.jpeg" alt="people art" class="quiz"></label><br>
+
+    <input id="4p4" type="radio" value="d" name="group4">
+    <label><img src="quiztreeart.jpeg" alt="ship wreck art" class="quiz"></label><br>
+ </div>
+  
+ 
+  <br><br>
+
+
+    <label>Which place would you most love to visit? </label><br>
+  <div class="imgcontainer">
+    <input id="5p1" type="radio" value="a" name="group5">
+    <label><img src="quizsunsetmoutains.jpeg" alt="sunset moutains" class="quiz"></label><br>
+
+    <input id="5p2" type="radio" value="b" name="group5">
+    <label><img src="quizfallforest.jpeg" alt="fall forest" class="quiz"></label><br>
+
+    <input id="5p3" type="radio" value="c" name="group5">
+    <label><img src="quizgreenfarm.jpeg" alt="green hills" class="quiz"></label><br>
+
+    <input id="5p4" type="radio" value="d" name="group5">
+    <label><img src="quiznightcity.jpeg" alt="city road at night" class="quiz"></label><br>
+  </div>
+    
+    <input type="button" value="Submit Answers" class="button" onclick="whichMovie();">
+    <input type="reset" value="Reset Questions" class="button"> 
+    <input type="button" value="Clear Movie Suggestion" class="button" onclick="resetResults();">
+  </form>
+
+  <p id="displayResults"></p>
+
+</div>
+<script>
+
+
+//Fuction for question pop up at end
+function whichMovie(){
+  var points = 0;
+    
+//Question 1
+    var ans1p1 = document.getElementById("1p1").checked;
+    var ans1p2 = document.getElementById("1p2").checked;
+    var ans1p3 = document.getElementById("1p3").checked;
+    var ans1p4 = document.getElementById("1p4").checked;
+
+  if (ans1p1 ==true) {
+    points = points + 1
+  }
+
+  if (ans1p2 ==true) {
+    points = points + 2
+  }
+
+  if (ans1p3 ==true) {
+    points = points + 3
+  }
+
+  if (ans1p4 ==true) {
+    points = points + 4
+  }
+
+
+//Question 2
+    var ans2p1 = document.getElementById("2p1").checked;
+    var ans2p2 = document.getElementById("2p2").checked;
+    var ans2p3 = document.getElementById("2p3").checked;
+    var ans2p4 = document.getElementById("2p4").checked;
+
+  if (ans2p1 ==true) {
+    points = points + 1
+  }
+
+  if (ans2p2 ==true) {
+    points = points + 2
+  }
+
+  if (ans2p3 ==true) {
+    points = points + 3
+  }
+
+  if (ans2p4 ==true) {
+    points = points + 4
+  }
+
+
+  //Question 3
+    var ans3p1 = document.getElementById("3p1").checked;
+    var ans3p2 = document.getElementById("3p2").checked;
+    var ans3p3 = document.getElementById("3p3").checked;
+    var ans3p4 = document.getElementById("3p4").checked;
+
+  if (ans3p1 ==true) {
+    points = points + 1
+  }
+
+  if (ans3p2 ==true) {
+    points = points + 2
+  }
+
+  if (ans3p3 ==true) {
+    points = points + 3
+  }
+
+  if (ans3p4 ==true) {
+    points = points + 4
+  }
+
+
+
+//Question 4
+    var ans4p1 = document.getElementById("4p1").checked;
+    var ans4p2 = document.getElementById("4p2").checked;
+    var ans4p3 = document.getElementById("4p3").checked;
+    var ans4p4 = document.getElementById("4p4").checked;
+
+  if (ans4p1 ==true) {
+    points = points + 1
+  }
+
+  if (ans4p2 ==true) {
+    points = points + 2
+  }
+
+  if (ans4p3 ==true) {
+    points = points + 3
+  }
+
+  if (ans4p4 ==true) {
+    points = points + 4
+  }
+
+
+//Question 5
+    var ans5p1 = document.getElementById("5p1").checked;
+    var ans5p2 = document.getElementById("5p2").checked;
+    var ans5p3 = document.getElementById("5p3").checked;
+    var ans5p4 = document.getElementById("5p4").checked;
+
+  if (ans5p1 ==true) {
+    points = points + 1
+  }
+
+  if (ans5p2 ==true) {
+    points = points + 2
+  }
+
+  if (ans5p3 ==true) {
+    points = points + 3
+  }
+
+  if (ans5p4 ==true) {
+    points = points + 4
+  }
+
+
+// display movie based on final score
+
+  if (points >= 1 && points <= 5){
+    document.getElementById("displayResults").innerHTML = "Based on your preferences you should watch Kiki's Delivery Service!";
+  }
+
+   if (points >= 6 && points <= 7){
+    document.getElementById("displayResults").innerHTML = "Try wacthing My Neighbor Totoro!";
+  }
+
+  if (points >= 8 && points <= 10){
+    document.getElementById("displayResults").innerHTML = "Your movie match is The Secret World of Arrietty!";
+  }
+
+  if (points >= 11 && points <= 13){
+    document.getElementById("displayResults").innerHTML = "The results have been added up... try watching Howl's Moving Castle!";
+  }
+
+  if (points >= 14 && points <= 16){
+    document.getElementById("displayResults").innerHTML = "Spirited Away is your perfect movie to watch!";
+  }
+
+  if (points >= 17 && points <= 20){
+    document.getElementById("displayResults").innerHTML = "Why not try Porco Rosso, based on your results, you'll love it!";
+  }
+
+} //close the function
+
+
+//Remove movie suggestion
+  function resetResults(){
+      document.getElementById('displayResults').innerHTML = "";
+  }
+
+
+
+
+/*Sidebar*/
+
+    /* When sidebar is open set the width to 250px and
+     the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+    /* When the sidebar is closes set the width  to 0 
+    and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
+</script>  
+</body>
+
+</html>
+
+
+
+
+
+
