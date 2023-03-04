@@ -1,0 +1,221 @@
+
+/*Setting the defult to 0, so images go to the edge*/
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+
+/*Homepage's background color #80BDDA #346517*/
+body.homepage {
+    background-color: lightblue;
+}  
+
+.imgcontainer{
+  position: relative;
+  text-align: center;
+  color: whitesmoke;
+  margin: -20px;
+}
+
+/* Text on homepage image*/
+.onimage{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  font-size: 10px; 
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;  
+}
+
+/*image slideshow for homepage*/
+#slideshow{
+  display: block;
+  width :auto;
+  height: 100px;
+  transition: 0.3s;
+}
+
+/*transparent sg logo*/
+img.homepage  {
+width: 130px;
+float: right;
+margin-right: 70px;
+}
+
+/*Instagram Hyperlink, using logo as hyperlink*/
+#Instagram{
+  width: 30px;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+/* Homepage's text, color and margins */
+h2.homepage{
+  font-size: 100px; /*trying to get font to be exactly across the page and very large*/
+  color: #4A74AA;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  text-align: center; /*centering the title*/
+}
+
+hr{
+  border: 5px solid #4A74AA;
+  border-radius: 5px;
+}
+
+h4.homepage{
+  color: #4A74AA; /*rgb(227, 163, 36);*/
+  margin-left: 60px;
+  margin-bottom: 40px;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  font-weight: bolder;
+}
+
+h3.homepage{
+  color:black; /*rgb(227, 163, 36);*/
+  text-align: center;
+  margin: 10px 170px 10px 170px;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  font-size: 40px; 
+}
+
+/*Homepages colored div backgrounds*/
+.back1home
+{
+  background-color: whitesmoke ;
+  padding-top: 100px; 
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+.back2home{
+  background-color:#102121 ;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+/*Display Timeline and gif inline*/
+.Timeline{
+  display: inline-block;
+}
+
+
+/*Totoro Gif*/
+#TotoroGif{
+margin: 0px 0px 0px 180px; 
+height: 450px;
+width: auto;
+}
+
+/*Title of Timeline*/
+#title{
+  /* padding-bottom: 20px; Moves title up*/
+   font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+   color: whitesmoke;
+   
+ }
+
+/*Vertical Timeline*/
+ul {
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 30px;
+  margin: 0px 0px 0px 40px;
+  color: whitesmoke;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+  font-size: 20px;
+}
+
+li:before {
+  content: '';
+  background-color: whitesmoke;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 7px;
+  width: 4px;
+}
+
+li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 15px;
+  width: 15px;
+}
+
+
+/*------------------------------------------------------------------*/
+/*Sidebar*/
+
+
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* Full-height when opened */
+  width: 0; 
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightblue; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Content is 60px from top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  opacity: 1;
+  font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+}
+
+/* Sidebar hyperlinks to other pages */
+.sidebar a {
+  padding: 8px 8px 8px 45px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* The X button (top right when sidebar is open) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Sidebar opening hamburger button */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: lightblue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.6;
+}
+.openbtn:hover {
+  background-color: #9BBC47/*rgb(199, 117, 207)*/;
+}
+
+
+
+
+
+
+
+
